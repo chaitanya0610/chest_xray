@@ -1,0 +1,53 @@
+{% extends 'chest_xray/base.html' %}
+{% load static %}
+{% block title_block %}
+Chest X-ray
+{% endblock %}
+{% block body_block %}
+
+<header>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('{% static "slide1.jpg" %}'); background-size: contain; background-color:black;">
+            <div class="carousel-caption d-none d-md-block" style="position:relative;">
+              <button onclick = "location.href='/chest_xray/start.html'" class="w3-btn w3-round-xxlarge" style="position:fixed; left:44%; bottom:41%; width:150px; background-color:black; font-size:22px; font-family:Arial, Helvetica, sans-serif">Start</button>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('{% static "slide2.png" %}'); background-size: contain; background-color:black;">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url('{% static "slide3.jpg" %}'); background-size: contain; background-color:black;">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <section class="py-5">
+      <div class="container">
+        <h1>Chest x-ray interpreter and disease prediction</h1>
+        <p>Many diseases or conditions may be detected or diagnosed based on a chest X-ray test. A chest X-ray test can also be very helpful in ruling out suspected diagnoses. Some of the common conditions that can be evaluated by this chest X-ray test are:</p>
+      </div>
+    </section>
+{% endblock %}

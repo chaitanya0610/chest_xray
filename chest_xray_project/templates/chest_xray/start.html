@@ -1,0 +1,15 @@
+{% extends 'chest_xray/base.html' %}
+{% load static %}
+{% block title_block %}
+Start
+{% endblock %}
+{% block body_block %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+{% if upload %}
+    <p>The disease is pneumonia</p>
+{% endif %}
+{% endblock %}
